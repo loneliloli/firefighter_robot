@@ -1,7 +1,48 @@
+<h1 align=center>Firefighting robot</h1>
+
+---
+
+A firefighting robot project. Details of the environment setup and the robot will be listed below.
+This work was done with [Arduino IDE](https://www.arduino.cc/en/software) with all its dependencies so it should
+be launched and executed with such.
+
 # **Sơ đồ/bản vẽ thiết kế sơ bộ/ chi tiết:**  
-- Bản vẽ 3D cơ khí (solid work)  
-- Bản vẽ mạch điện (Altium)  
-- Sơ đồ mô phỏng nhà(Map)  
+
+## Bản vẽ 3D cơ khí (Solidwork)
+
+## Bản vẽ mạch điện (Altium)
+
+### Sơ đồ nguyên lý Mạch điều khiển chính Robot
+
+![](assets/img12.png)
+
+### Sơ đồ mạch in Mạch điều khiển chính Robot
+
+![](assets/img13.png)
+![](assets/img14.png)
+
+### Sơ đồ nguyên lý Mạch cảm biến lửa gắn tại các phòng
+
+![](assets/img15.png)
+
+### Sơ đồ mạch in Mạch cảm biến lửa
+
+![](assets/img16.png)
+![](assets/img17.png)
+
+### Sơ đồ nguyên lý Mạch cảm biến dò Line
+
+![](assets/img18.png)
+
+### Sơ đồ mạch in Mạch cảm biến dò Line
+
+![](assets/img19.png)
+![](assets/img20.png)
+
+## Sơ đồ mô phỏng nhà(Map)
+
+![](assets/img21.png)
+
 # **Thiết kế từng bộ phận:**
 
 ## **Thiết kế robot chữa cháy**
