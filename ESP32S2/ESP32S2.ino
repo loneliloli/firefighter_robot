@@ -40,13 +40,6 @@ void setup() {
 
 void loop() {
 
-    //  Serial.print(analogRead(5)); Serial.print("\t");
-    //  Serial.print(analogRead(7)); Serial.print("\t");
-    //  Serial.print(analogRead(9)); Serial.print("\t");
-    //  Serial.print(analogRead(11)); Serial.print("\t");
-    //  Serial.print(analogRead(4)); Serial.print("\t");
-    //  Serial.print(analogRead(6)); Serial.println("\t");
-
     int sum = 0;
     for (int j = 0; j < 6; j++) {
         sum += analogRead(sen[j]);

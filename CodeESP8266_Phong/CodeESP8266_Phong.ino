@@ -1,5 +1,4 @@
 #define BUZZ 15
-// 84:FC:E6:D1:24:54
 
 #include <ESP8266WiFi.h>
 #include <espnow.h>
