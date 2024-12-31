@@ -6,6 +6,21 @@ A firefighting robot project. Details of the environment setup and the robot wil
 This work was done with [Arduino IDE](https://www.arduino.cc/en/software) with all its dependencies so it should
 be launched and executed with such.
 
+Despite the world progressively moving toward automated systems and self-driving cars, in the event of a fire 
+breaking out in a building, we are still forced to rely on human resources, risking the loss of even more lives.
+Therefore, our system steps in to solve this problem and protect the lives of our heroes.
+
+Our robot is powered by an ESP32-S2, a low-cost, low-power Wi-Fi microcontroller SoC. Despite this, 
+it boasts a rich set of I/O capabilities and high performance under extreme temperatures, making it ideal for our purposes.
+
+The robot is equipped with reliable mechanical parts, low-cost and low-power flame and line sensors, an AI-powered 
+camera for fire detection, and a fully integrated firefighting system. With the help of ESP Now, the system is highly 
+customizable, easy to monitor, and fully autonomous, with multiple failsafes and an array of methods to detect, inform, 
+and/or extinguish fires.
+
+To summarize, our system is a low-cost, high-performance, feature-rich alternative method for firefighting. In the future, 
+it could play a pivotal role in the adaptation of smart home systems and fully autonomous industrial environments.
+
 # **Sơ đồ/bản vẽ thiết kế sơ bộ/ chi tiết:**  
 
 ## Bản vẽ 3D cơ khí (Solidwork)
