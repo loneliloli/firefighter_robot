@@ -6,10 +6,6 @@ A firefighting robot project. Details of the environment setup and the robot wil
 This work was done with [Arduino IDE](https://www.arduino.cc/en/software) with all its dependencies so it should
 be launched and executed with such.
 
-Despite the world progressively moving toward automated systems and self-driving cars, in the event of a fire 
-breaking out in a building, we are still forced to rely on human resources, risking the loss of even more lives.
-Therefore, our system steps in to solve this problem and protect the lives of our heroes.
-
 Our robot is powered by an ESP32-S2, a low-cost, low-power Wi-Fi microcontroller SoC. Despite this, 
 it boasts a rich set of I/O capabilities and high performance under extreme temperatures, making it ideal for our purposes.
 
@@ -21,155 +17,225 @@ and/or extinguish fires.
 To summarize, our system is a low-cost, high-performance, feature-rich alternative method for firefighting. In the future, 
 it could play a pivotal role in the adaptation of smart home systems and fully autonomous industrial environments.
 
-# **Sơ đồ/bản vẽ thiết kế sơ bộ/ chi tiết:**  
+<h1 align=center>INTRODUCTION</h1>
 
-## Bản vẽ 3D cơ khí (Solidwork)
+Hanoi has seen a significant increase in both the number and severity of fires in recent years. From
+2014 to 2023, statistics indicate that Hanoi experienced 4,459 fires, which led to 202 deaths and
+271 injuries. Of these incidents, 52% occurred in residential houses or combined residential and
+business establishments.
+In 2023-2024 alone, Hanoi witnessed four devastating fires with significant human casualties:
+- On September 12th, 2023, a fire broke out in a mini apartment building in Khuong Dinh Ward,
+Thanh Xuan District, Hanoi. This building, housing 40 apartments and more than 150
+residents, claimed 56 lives and completely destroyed all assets in the affected apartments.
+- On October 26th, 2023, a fire at a scrap-collecting house in Tu Hiep Commune, Thanh Tri
+District, Hanoi, resulted in the tragic death of a mother and her two children. The father was
+hospitalized in critical condition with severe burns.
+- On May 24th, 2024, a boarding house located on Trung Kinh Street, Cau Giay District, Hanoi,
+measuring 100 square meters across three floors with 12 rooms, caught fire, resulting in 14
+deaths.
+- On June 16th, 2024, a six-story private house at 207 Dinh Cong Ha Street, Dinh Cong Ward,
+Hoang Mai District, Hanoi, burned down, killing four people, including a grandmother and
+her three grandchildren.
+Fires were mostly caused by electrical short circuits, often occurring at night, which made early
+detection and intervention challenging. As a result, fires escalated rapidly, causing significant
+damage. When fires were discovered, residents often struggled to escape, leading to loss of life.
+The aftermath of each fire extends beyond material damage, resulting in profound human tragedy.
+Most residents in mini apartments and boarding houses are students attending Hanoi’s universities
+or young families. Victims of house fires are predominantly elderly and children.
 
-## Bản vẽ mạch điện (Altium)
+I was deeply haunted by the images on news websites and social media of parents rushing from
+all over the country to hospitals, anxiously awaiting news of their children, only to collapse in
+despair upon learning they had passed away—some even unrecognizable.
 
-### Sơ đồ nguyên lý Mạch điều khiển chính Robot
+Faced with this grim reality, I conceived the idea of creating a robot capable of early fire detection,
+cutting power sources in case of electrical short circuits, alerting nearby residents, and
+extinguishing fires autonomously before human intervention is required. This robot aims to reduce
+fire spread risk and provide timely warnings for effective response.
+
+I shared this idea with my cousin, Mr. Muon Duc Minh (a PhD Candidate at LAAS–CNRS, France).
+With his support and encouragement, I formed a team of three members and began working on
+the project in August 2024.
+
+<h1 align=center>OUR TEAM</h1>
+
+| Name | Information | Role/Responsibility |
+| ----- | ----- | ----- |
+| MUON Duc Minh  | - PhD Candidate <br/> - LAAS-CNRS, France    | Instructor, Consultant |
+| DOAN Quang Tuan  | - Student <br/> - Hanoi Amsterdam High school for the gifted – Vietnam | - Idea Creator, Co-Inventor <br/> - Propose ideas, design sketches <br/> - Select components <br/> - Measure component parameters <br/> - Robot fabrication and installation <br/> - Test sensor, motor |
+|NGUYEN Van Thang  | - Student <br/> - Hanoi Amsterdam High school for the gifted – Vietnam | - Co-Inventor <br/> - 3D mechanical design from sketches <br/> - Robot fabrication and installation |
+| TRAN Van Dao  | - Student <br/> - Hanoi University of Science and Technology - Vietnam | - Co-Inventor <br/> - Design circuit <br/> - Code <br/> - Test sensor, motor |
+
+<h1 align=center>ROBOT FEATURES</h1>
+
+## Building Alarm System
+The robot is equipped with an alarm system capable of producing loud sounds to alert building
+residents in the event of a fire.
+## Automatic Main Power Shutdown
+When a fire occurs, the robot activates a system to cut off the main power supply using relays,
+reducing the risk of electrical short circuits or secondary explosions. This function ensures the
+safety of both people and equipment, facilitating firefighting efforts.
+## Fire Location Detection and Autonomous Extinguishing
+Using flame and smoke sensors combined with a camera, the robot accurately identifies the fire’s
+location. It then navigates optimally to the site, activates its fire suppression system, and returns
+to its original position, ready for the next task. This ensures continuous and efficient operation.
+
+<h1 align=center>FIRE-FIGHTING SYSTEM DESIGN AND ASSEMBLY</h1>
+
+## Drawings
+
+### Mechanical 3D drawings (Solidwork)
+
+### Electrical circuit drawings (Altium)
+
+#### Schematic diagram of the main control circuit of the Robot
 
 ![](assets/img12.png)
 
-### Sơ đồ mạch in Mạch điều khiển chính Robot
+#### Circuit diagram of Robot main control circuit
 
 ![](assets/img13.png)
 ![](assets/img14.png)
 
-### Sơ đồ nguyên lý Mạch cảm biến lửa gắn tại các phòng
+#### Schematic diagram of fire sensor circuit mounted in rooms
 
 ![](assets/img15.png)
 
-### Sơ đồ mạch in Mạch cảm biến lửa
+#### Circuit diagram of Fire sensor circuit
 
 ![](assets/img16.png)
 ![](assets/img17.png)
 
-### Sơ đồ nguyên lý Mạch cảm biến dò Line
+#### Line Detection Sensor Circuit Schematic Diagram
 
 ![](assets/img18.png)
 
-### Sơ đồ mạch in Mạch cảm biến dò Line
+#### Circuit diagram of Line detector sensor circuit
 
 ![](assets/img19.png)
 ![](assets/img20.png)
 
-## Sơ đồ mô phỏng nhà(Map)
+#### House simulation diagram (Map)
 
 ![](assets/img21.png)
 
-# **Thiết kế từng bộ phận:**
+## Robot Parts Design
 
-## **Thiết kế robot chữa cháy**
+### Robot body design
 
-### Phần bánh xe
+#### Wheels
 
-Phần bánh xe Phần bánh xe của robot sử dụng bánh xe dây đai, tương tự như bánh xe tăng, giúp tăng độ ma sát và khả năng bám đường. Cấu trúc này cho phép robot di chuyển trên nhiều loại bần mặt với độ ốn định cao. Bánh xe dây đai còn hạn chế hiện tượng trượt khi robot phải di chuyển qua các khu vực bất đồng hoặc góc nghiêng.
+The robot uses belt wheels, similar to tank tracks, to increase friction and grip. This structure
+allows stable movement across various surfaces, minimizing slippage on uneven or inclined areas.
+Motors with encoders (JGB37) ensure precise speed control.
 
-![](assets/img1.png)![Ảnh có chứa người, kỹ thuật, máy, Kỹ thuật điệnMô tả được tạo tự động](assets/img2.png)
+![](assets/img1.png)![](assets/img2.png)![](assets/img3.jpg)
 
-Động cơ sử dụng là động cơ JGB37 có encoder để điều khiển chính xác tốc độ động cơ
+#### Chassis
 
-![Động Cơ DC Servo JGB37-520 DC Geared Motor](assets/img3.jpg)
+Designed in 3D and CNC-cut from steel for durability and heat resistance, the chassis facilitates accurate assembly of components such as sensors, cameras, and fire suppression systems.
 
-### Khung xe
+![](assets/img4.png)![](assets/img5.png)
 
-Khung xe Khung xe được thiết kế và vẽ 3D, sau đó gia công cắt CNC từ vật liệu thép để đảm bảo độ bền và khả năng chịu nhiệt cao. Thiết kế này giúp khung xe có độ chính xác cao và dễ dàng lắp ráp các bộ phận khác như cảm biến, camera và hệ thống xịt cứu hoả.
+#### Fire Detection and Navigation
 
-![Ảnh có chứa mặt đất, nhựa, công cụ, màu xanh lamMô tả được tạo tự động](assets/img4.png)![Ảnh có chứa bình cứu hỏa, mặt đất, người, công cụMô tả được tạo tự động](assets/img5.png)
+Equipped with line-following sensors, the robot tracks predefined routes to quickly and accurately reach the fire location.
 
-### Dò đường
+![](assets/img6.png)![](assets/img11.jpg)
 
-Robot được trang bị cảm biến dò line để theo dõi các vạch line dẫn đường. Hệ thống cảm biến này giúp robot di chuyển chính xác theo tuyến đường định sẵn, đảm bảo đến đúng vị trí cần chữa cháy một cách nhanh chóng và hiệu quả.
+#### Fire Extinguishing Mechanism
 
-![](assets/img6.png)
+The robot uses replaceable fire extinguishers securely mounted for stability during movement and
+efficient activation when needed.
 
-### Cơ cấu xịt cứu hoả
+#### Flame Detection
 
-Robot sử dụng bình cứu hoả có thể thay thế dễ dàng, thuận tiện trong quá trình vận hành. Hệ thống được thiết kế để giữ bình cứu hoả chắc chắn trong khi robot di chuyển và kích hoạt phun khi cần thiết, đảm bảo khả năng chữa cháy nhanh và hiệu quả.
+The fire detection sensors are installed in the rooms to detect fires using infrared waves. The robot
+is also equipped with a flame sensor to enhance the accuracy of fire source detection, allowing it
+to adjust the nozzle to the correct direction before activating the fire extinguisher for spraying.
 
-### Cơ cấu nhận diện/detect lửa
+#### Alarm
 
-Camera AI được tích hợp trên robot giúp nhận diện ngọn lửa thông qua hình ảnh và nhiệt độ. Ngoài ra, robot còn trang bị cảm biến lửa (flame sensor) để tăng độ chính xác khi phát hiện nguồn cháy. Camera AI xử lý dữ liệu theo thời gian thực và điều hướng robot đến vị trí cần xử lý.
+A high-intensity alarm alerts people nearby to the fire and the robot’s location during operation.
 
-### Còi báo động
+![](assets/img7.jpg)
 
-Robot được trang bị còi báo động cường độ cao để cảnh báo khi phát hiện nguồn cháy. Còi này cũng hoạt động như một biện pháp báo hiệu an toàn cho những người xung quanh biết vị trí của robot khi nó đang hoạt động.
+#### Wireless Communication
 
-![Còi Buzz chủ động 5V](assets/img7.jpg)
+Using the ESP-NOW protocol, the robot communicates wirelessly with building sensors, ensuring
+fast and stable data transmission. This enables precise updates on fire locations
 
-### Truyền thông
+#### Control Circuitry
 
-Robot sử dụng giao thức ESP-NOW để truyền thông không dây với các cảm biến trong toà nhà. Giao thức này giúp truyền dữ liệu nhanh chóng và ổn định, đảm bảo thông tin về vị trí nguồn cháy được cập nhật chính xác cho robot.
-
-### Mạch điều khiển trung tâm
-
-Mạch điều khiển chính được vẽ bằng phần mềm, sau đó gia công ăn mòn mạch đồng, tăng tính thẩm mỹ và gọn nhẹ. Với vi điều khiển chính là esp32 với tốc độ xử lý cao và hỗ trợ nhiều chân INPUT OUTPUT.
+The main control circuit, created using ESP32 microcontrollers, features high processing speeds
+and multiple I/O pins.
 
 ![ESP32 WROOM 32 MICRO, DEVKIT RF 38 PIN](assets/img8.png)
 
-### Nguồn
+#### Power Supply
 
-Nguồn cho robot được ghép từ 9 viên pin 18650 với điện áp đầu ra lên tới 12V cung cấp cho toàn bộ robot. 
+Powered by nine 18650 batteries, providing a 12V output for all operations.
 
-![Pin PANASONIC 18650 Chính Hãng (Giá Buôn tốt nhất 2020)](assets/img9.jpg)
+![](assets/img9.jpg)
 
-## **Thiết kế mạng cảm biến báo cháy toà nhà**  
-### Truyền thông giao tiếp
+### Building fire alarm sensor network desgin
 
-Mạng cảm biến sử dụng giao thức ESP-NOW để kết nối không dây giữa các cảm biến và robot chữa cháy. Hệ thống truyền thông này có khả năng hoạt động trong môi trường có nhiều nhiễu, đảm bảo tín hiệu được truyền đến robot trong thời gian ngắn nhất.
+#### Wireless Communication:
+Sensors and robots connect wirelessly via ESP-NOW, capable of transmitting over 400 meters in
+open environments.
 
-Giao tiếp ESP NOW có thể truyền xa tới 400m trong môi trường không có vật cản
+#### Flame Sensors:
+Each room has flame sensors (detecting light emitted by fire). When a fire is detected, signals are
+sent to the robot to trigger warnings and extinguishing actions.
 
-### Cảm biến khói, lửa
+#### Alarms
+Each area is equipped with separate alarms that activate when sensors detect fire, urging
+evacuation.
 
-Mỗi phòng trong toà nhà được trang bị cảm biến khói (smoke sensor) và cảm biến lửa (flame sensor). Cảm biến khói phát hiện nồng độ khí CO và các hạt bụi mịn trong không khí, trong khi cảm biến lửa nhận diện ánh sáng phát ra từ ngọn lửa. Khi có cháy, các cảm biến sẽ gửi tín hiệu đến robot và kích hoạt hệ thống cảnh báo.
+#### Main Power Shutdown
+Sensors integrated with relays cut the main power in affected areas to minimize fire spread risks
+due to electrical short circuits.
 
-### Còi
+Due to the tight timelines, our team has not yet completed this function. We will continue to
+complete in January 2025.
 
-Mỗi khu vực được trang bị còi báo động riêng. Khi cảm biến phát hiện lửa hoặc khói, còi sẽ kích hoạt để cảnh báo mọi người sơ tán khỏi khu vực nguy hiểm.
-
-### Cơ chế tắt cầu giao nguồn điện tổng
-
-Hệ thống cảm biến được tích hợp với relay để điều khiển cầu giao nguồn điện tổng. Khi phát hiện cháy, relay sẽ ngắt nguồn điện ở khu vực bị ảnh hưởng để giảm nguy cơ cháy lan do chập điện.
-
-# **Thuyết minh chi tiết chung toàn bộ công dụng robot**
-
-*Công dụng 1: Báo động toà nhà khi xảy ra cháy nổ*
-
-Robot được trang bị hệ thống còi báo động có thể phát âm thanh lớn để cảnh báo cư dân trong toà nhà về sự cố cháy nổ. Cùng với đó, các tín hiệu cảnh báo có thể được gửi đến trung tâm điều khiển để kích hoạt hệ thống cứu hoả hoặc thông báo cho nhân viên an ninh.
-
-*Công dụng 2: Robot tự động tắt nguồn điện tổng*
-
-Khi xảy ra cháy, robot sẽ kích hoạt hệ thống tắt nguồn điện tổng thông qua điều khiển relay, giúp giảm nguy cơ chập điện hoặc các vụ nổ thứ cấp. Chức năng này đảm bảo an toàn cho cả người và thiết bị trong toà nhà, đồng thời tạo điều kiện thuận lợi cho công tác chữa cháy.
-
-*Công dụng 3: Robot xác định vị trí cháy và tự đến nơi để dập tắt đám cháy, sau đó tự đi về vị trí ban đầu*
-
-Robot sử dụng các cảm biến dò lửa và khói kết hợp với camera để xác định chính xác vị trí xảy ra cháy. Sau khi xác định được vị trí, robot di chuyển theo tuyến đường tối ưu đến hiện trường và kích hoạt hệ thống xịt cứu hoả. Sau khi hoàn thành nhiệm vụ, robot tự động quay về vị trí ban đầu để sẵn sàng cho nhiệm vụ tiếp theo, đảm bảo khả năng hoạt động liên tục và hiệu quả.
-
-# **Hình ảnh lắp ráp từng giai đoạn/ bộ phận của robot**  
-# **Sai sót trong quá trình lắp ráp robot**  
-- Động cơ yếu: Khối lượng robot vào khoảng 10kg, do đó phải thay đổi cơ cấu từ 2 động cơ lên 4 động cơ  
-- Khung robot: Tính toán sai kích thước nên phải đi gia công lại khung robot nhiều lần, ban đầu dùng mica nhưng bị gãy không tải được robot.
+## Challenges and Adjustments During Design and Assembly  
+### Chassis Issues
+- Initially, the team used mica to reduce costs, but it broke during operation. <br/>
+&rarr; Solution: Replaced mica with steel.
+- Initial design lacked a mechanism to support fire extinguisher installation. <br/>
+&rarr; Solution: Redesigned and re-cut the steel chassis
 
 ![](assets/img10.jpg)
 
-*Khung cũ thiết kế thiếu cơ chế xịt*
+### Motor Issues
+Initial design included only two motors, insufficient for the robot’s total weight (~10kg). <br/>
+&rarr; Solution: Upgraded to four motors
 
--   
-# **Thành phần đội nhóm tham gia, vai trò từng thành viên**
+<h1 align=center>COMPLETION AND TRIAL RUN</h1>
 
-| Họ và Tên | A | B |
-| ----- | ----- | ----- |
-| Thông tin  | Sinh viên năm Khoa: Trường: | Sinh viên năm Khoa: Trường: |
-| Vai trò | \- Thiết kế 3D cơ khí từ bản phác thảo \- Đo đạc thông số linh kiện \- Gia công và lắp đặt robot \- Lựa chọn linh kiện | \-Thiết kế mạch cho robot \- Test cảm biến, động cơ \- Code cho robot (mạch phần cứng, xử lý ảnh nhận diện lửa…) |
+After numerous adjustments, the team successfully conducted the robot’s trial run on Christmas
+Eve, December 24, 2024. The robot performed all its designated functions effectively. We do hope
+that in the near future, every house will have an automatic fire-fighting robot to extinguish any
+fire risk from the very first seconds and there will be no more death.
 
-# **Khả năng mở rộng, cải tiến trong tương lai**  
-* Tích hợp với hệ thống báo cháy toà nhà  
-* Robot có thể leo cầu thang, di chuyển giữa các tầng  
-* Gửi tín hiệu qua tin nhắn SMS cảnh báo tới người dùng  
-* Trợ lý ảo giám sát toà nhà  
-    
-8. **Bản code sau khi hoàn thiện**
+[Video 1](https://youtu.be/cpQo2qXDWXk?si=D6PnczOKzeps67Xv): Robot operating with unused fire extinguisher
 
-![](assets/img11.jpg)
+[Video 2](https://youtu.be/-l3LrLwg-NE?si=zJciBQ6XLEW5Xk0W): Robot operating with used fire extinguisher
+
+
+<h1 align=center>PROPOSED UPGRADES</h1>
+
+Due to the fact that the product was created by a group of students with limited experience, tight
+timelines, and a limited budget, although all required functions and tasks were completed, the
+final product is still at the demo stage. The development team has proposed several improvements
+to make the robot smarter, more flexible, and user-friendly, as well as to enhance its firefighting
+efficiency on various terrains, with the aim of making it more suitable for real-world applications.
+
+| Feature  | Proposed Improvement |
+| ----- | ----- |
+| Fire Signal Detection | Integrate with building’s fire alarm system to expand detection range beyond robot-installed sensors |
+| Operational Range | Currently, the robot moves based on detecting guiding lines and follows them, so it can only be used within the confines of a small apartment. It requires pre-set lines leading to potential fire hazard areas with sensors placed at those locations. An improvement could be to integrate AI and related recognition and positioning tools, allowing the robot to independently determine the most suitable path to the fire origin point. |
+| Robot Shape  | Redesign with legs for stair climbing and uneven terrain navigation, add robotic arms for wider coverage |
+| Operation Time | Currently, the setup time for each operation of the fire extinguisher is 10 seconds, which is the estimated time to spray all the extinguishing powder in the fire extinguisher. After this time, the system will stop, and robot will return to the starting position. This may result in situations where the robot has not yet extinguished the fire, but the extinguisher runs out, causing the robot to stop functioning. Alternatively, it may receive a signal to continue but move to the fire location and operate an extinguisher that has run out of materials, leading to an incomplete fire extinguishing effort. Therefore, the team proposes the following improvements:<br/> 1. The robot can carry multiple extinguishers at once, and the operation of these extinguishers will proceed sequentially until the fire signal is no longer detected or all extinguishers are depleted, depending on which condition occurs first.<br/> 2. The robot can return to the extinguisher storage, automatically remove the empty extinguisher, install a new one, and continue spraying to extinguish the fire as long as the fire signal persists. |
+| User Alerts | Add SMS notifications for fire alerts. |
+| Main power shutdown |  Add sensors integrated with relays to cut the main power in affected areas to minimize fire spread risks due to electrical short circuits. |
