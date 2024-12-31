@@ -67,6 +67,8 @@ the project in August 2024.
 
 <h1 align=center>ROBOT FEATURES</h1>
 
+![](assets/img22.png)
+
 ## Building Alarm System
 The robot is equipped with an alarm system capable of producing loud sounds to alert building
 residents in the event of a fire.
@@ -85,6 +87,8 @@ to its original position, ready for the next task. This ensures continuous and e
 
 ### Mechanical 3D drawings (Solidwork)
 
+![](assets/img23.jpg)
+
 ### Electrical circuit drawings (Altium)
 
 #### Schematic diagram of the main control circuit of the Robot
@@ -102,8 +106,9 @@ to its original position, ready for the next task. This ensures continuous and e
 
 #### Circuit diagram of Fire sensor circuit
 
-![](assets/img16.png)
-![](assets/img17.png)
+|||
+| ----------------------------------- | ----------------------------------- |
+| ![](assets/img16.png) | ![](assets/img17.png) |
 
 #### Line Detection Sensor Circuit Schematic Diagram
 
@@ -134,24 +139,36 @@ Motors with encoders (JGB37) ensure precise speed control.
 
 Designed in 3D and CNC-cut from steel for durability and heat resistance, the chassis facilitates accurate assembly of components such as sensors, cameras, and fire suppression systems.
 
-![](assets/img4.png)![](assets/img5.png)
+|||
+| ----------------------------------- | ----------------------------------- |
+| ![](assets/img4.png) | ![](assets/img5.png) |
 
 #### Fire Detection and Navigation
 
 Equipped with line-following sensors, the robot tracks predefined routes to quickly and accurately reach the fire location.
 
-![](assets/img6.png)![](assets/img11.jpg)
+|||
+| ----------------------------------- | ----------------------------------- |
+| ![](assets/img6.png) | ![](assets/img11.jpg) |
 
 #### Fire Extinguishing Mechanism
 
 The robot uses replaceable fire extinguishers securely mounted for stability during movement and
 efficient activation when needed.
 
+|||
+| ----------------------------------- | ----------------------------------- |
+| ![](assets/img24.jpg) | ![](assets/img25.jpg) |
+
 #### Flame Detection
 
 The fire detection sensors are installed in the rooms to detect fires using infrared waves. The robot
 is also equipped with a flame sensor to enhance the accuracy of fire source detection, allowing it
 to adjust the nozzle to the correct direction before activating the fire extinguisher for spraying.
+
+|||
+| ----------------------------------- | ----------------------------------- |
+| ![](assets/img26.jpg) | ![](assets/img27.png) |
 
 #### Alarm
 
@@ -175,9 +192,15 @@ and multiple I/O pins.
 
 Powered by nine 18650 batteries, providing a 12V output for all operations.
 
-![](assets/img9.jpg)
+|||
+| ----------------------------------- | ----------------------------------- |
+| ![](assets/img9.jpg) | ![](assets/img28.jpg) |
 
 ### Building fire alarm sensor network desgin
+
+|||
+| ----------------------------------- | ----------------------------------- |
+| ![](assets/img29.jpg) | ![](assets/img30.png) |
 
 #### Wireless Communication:
 Sensors and robots connect wirelessly via ESP-NOW, capable of transmitting over 400 meters in
@@ -205,7 +228,9 @@ complete in January 2025.
 - Initial design lacked a mechanism to support fire extinguisher installation. <br/>
 &rarr; Solution: Redesigned and re-cut the steel chassis
 
-![](assets/img10.jpg)
+| Bug version | Fixed version |
+| ----------------------------------- | ----------------------------------- |
+| ![](assets/img10.jpg) | ![](assets/img31.png) |
 
 ### Motor Issues
 Initial design included only two motors, insufficient for the robot’s total weight (~10kg). <br/>
@@ -222,6 +247,12 @@ fire risk from the very first seconds and there will be no more death.
 
 [Video 2](https://youtu.be/-l3LrLwg-NE?si=zJciBQ6XLEW5Xk0W): Robot operating with used fire extinguisher
 
+
+|||
+| ----------------------------------- | ----------------------------------- |
+| ![](assets/img32.jpg) | ![](assets/img33.png) |
+| ![](assets/img34.jpg) | ![](assets/img35.jpg) |
+| ![](assets/img36.jpg) | ![](assets/img37.jpg) |
 
 <h1 align=center>PROPOSED UPGRADES</h1>
 
