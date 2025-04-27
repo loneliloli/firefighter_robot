@@ -214,13 +214,6 @@ sent to the robot to trigger warnings and extinguishing actions.
 Each area is equipped with separate alarms that activate when sensors detect fire, urging
 evacuation.
 
-#### Main Power Shutdown
-Sensors integrated with relays cut the main power in affected areas to minimize fire spread risks
-due to electrical short circuits.
-
-Due to the tight timelines, our team has not yet completed this function. We will continue to
-complete in January 2025.
-
 ## Challenges and Adjustments During Design and Assembly  
 ### Chassis Issues
 - Initially, the team used mica to reduce costs, but it broke during operation. <br/>
